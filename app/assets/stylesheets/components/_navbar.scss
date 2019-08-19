@@ -7,6 +7,40 @@
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.signature{
+  font-family: $dosis;
+  font-size: 40px;
+  font-weight: 200;
+  color: $blue;
+  letter-spacing: 1px;
+}
+
+
+// .navbar-light .navbar-nav .active .nav-link{
+//   color: $blue;
+//   margin-right: 20px;
+//   &:hover{
+//     color: $blue;
+//   }
+// }
+
+.collapse .navbar-nav .nav-item .nav-link{
+  font-weight: bolder;
+  border: 1px solid $light-blue;
+  padding: 8px 24px;
+  border-radius: 50px;
+  margin-right: 10px;
+  &:hover{
+    color: $blue;
+  }
+}
+
+.navbar{
+  border-bottom: 2px solid $blue;
+  height: 100px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
 }
