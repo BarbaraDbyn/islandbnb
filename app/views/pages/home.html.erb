@@ -1,2 +1,43 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1527401850656-0f34108fdb30?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2070&q=80);">
+  <div class="container">
+    <h1>Tentez l'expérience du <span class="italic">bout du monde...</span></h1>
+    <p>...Offrez-vous le séjour de vos rêves !</p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="home-form">
+    <h2 class="container">Réservez une île et une expérience unique</h2>
+    <hr style="margin-left: 15px">
+    <br>
+    <form>
+      <div class="form-row col-md-12">
+        <div class="form-group col-md-4">
+          <label for="inputContinent">OÙ</label>
+          <select id="inputState" class="form-control">
+            <option>Choose...</option>
+            <option>Afrique</option>
+            <option>Amérique du Nord</option>
+            <option>Amérique du Sud</option>
+            <option>Asie</option>
+            <option>Europe</option>
+            <option>Océanie</option>
+          </select>
+        </div>
+        <div class="form-group col-md-3">
+          <label for="inputPassword4">ARRIVÉE</label>
+          <input type="date" class="form-control" id="inputdeparturedate" placeholder="Password">
+        </div>
+        <div class="form-group col-md-3">
+          <label for="inputPassword4">DEPART</label>
+          <input type="date" class="form-control" id="inputarrivaldate" placeholder="Password">
+        </div>
+        <div class="form-group col-md-2">
+          <label for="inputNumber">VOYAGEURS</label>
+          <input type="number" class="form-control" id="inputNumber" placeholder="Nombre">
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary" style="margin-left: 15px">Rechercher</button>
+    </form>
+  </div>
+</div>
