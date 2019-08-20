@@ -1,30 +1,13 @@
 <div class="row">
-  <div class="col-sm-3">
-    <div class="card">
-      <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1529333241880-9558d5e5e064?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)">
-        <h5 class="card-title">Asie</h5>
-      </div>
+  <% CONTINENT_CARD.each do |continent| %>
+    <div class="col-sm-4">
+      <%= link_to islands_path(continent: continent[:name]) do %>
+        <div class="card-continent my-3">
+          <div class="card-body d-flex justify-content-center align-items-center" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= continent[:image_path] %>)">
+            <div><%= continent[:name] %></div>
+          </div>
+        </div>
+      <% end %>
     </div>
-  </div>
-  <div class="col-sm-3">
-    <div class="card">
-      <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1436914228390-c080778dd589?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)">
-        <h5 class="card-title">Afrique</h5>
-      </div>
-    </div>
-  </div>
-  <div class="col-sm-3">
-    <div class="card">
-      <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)">
-        <h5 class="card-title">Amérique du Sud</h5>
-      </div>
-    </div>
-  </div>
-  <div class="col-sm-3">
-    <div class="card">
-      <div class="card-body" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1443181994330-3e365ff8949e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)">
-        <h5 class="card-title">Océanie</h5>
-      </div>
-    </div>
-  </div>
+  <% end %>
 </div>

@@ -11,18 +11,34 @@
     <hr style="margin-left: 15px">
     <br>
 
-    <form>
+    <%= render 'shared/cardcontinent' %>
+    <%= render 'shared/cardproduct' %>
+  </div>
+
+
+   <!-- SECOND CODE FOR THE SEARCH BAR => BETTER ONE
+      <div class="flash flash-success fade show">
+    < simple_form_for @island, method: :get do |f| %>
+      <div class="form-row">
+        <div class="col-6 form-group">
+        <= f.input :continent,  label: false, collection: ["Afrique","Amérique du Nord","Amérique du Sud","Asie","Europe","Océanie"], prompt: "Select your continent" %>
+        </div>
+        <div class="col-6 form-group">
+        <= f.submit "rechercher" %>
+        </div>
+      </div>
+      <end%>
+
+
+
+
+   codes for search bar:
+
+   <form>
       <div class="form-row col-md-12">
         <div class="form-group col-md-4">
           <label for="inputContinent">OÙ</label>
           <select id="inputState" class="form-control">
-            <option>Choose...</option>
-            <option>Afrique</option>
-            <option>Amérique du Nord</option>
-            <option>Amérique du Sud</option>
-            <option>Asie</option>
-            <option>Europe</option>
-            <option>Océanie</option>
           </select>
         </div>
         <div class="form-group col-md-3">
@@ -41,12 +57,4 @@
       <button type="submit" class="btn btn-primary" style="margin-left: 15px">Rechercher</button>
     </form>
   </div>
-  <%= render 'shared/cardcontinent' %>
-  <%= render 'shared/cardproduct' %>
-</div>
-
-<%= simple_form_for @island, method: :get do |f| %>
-  <%= f.input :name %>
-  <%= f.input :continent, collection: ["Afrique","Amérique du Nord","Amérique du Sud","Asie","Europe","Océanie"] %>
-  <%= f.button :submit %>
-<% end %>
+</div> -->
