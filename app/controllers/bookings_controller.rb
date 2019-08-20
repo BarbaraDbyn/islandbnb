@@ -3,7 +3,7 @@ before_action :find_booking, only: [:show, :edit, :update, :destroy]
 skip_before_action :authenticate_user!, only: [:home, :index, :show]
 
   def index
-    @bookings = Booking.all
+    @bookings = current_user.bookings
   end
 
   def new
