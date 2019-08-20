@@ -34,12 +34,5 @@ islands_attributes = [
     price_per_day: 4000
   }]
 
-users_attributes = [
-  {
-
-  }
-]
-
 Island.create!(islands_attributes)
-User.create!(users_attributes)
 puts 'Finished!'
