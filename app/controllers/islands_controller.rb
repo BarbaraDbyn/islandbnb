@@ -3,10 +3,14 @@ class IslandsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:home, :index, :show]
 
   def index
-    @islands = Island.all
+    if params[:island][:name].present? || params[:island][:continent].present?
+      @islands = Island.where("name ILIKE ? AND continent ILIKE ?", "%#{params[:island][:name]}%", "%#{params[:island][:continent]}%")
+    else
+      @islands = Island.all
+    end
   end
 
-   def new
+  def new
     @island = Island.new
   end
 

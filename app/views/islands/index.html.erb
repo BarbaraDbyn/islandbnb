@@ -1,2 +1,7 @@
 <h1>Islands#index</h1>
 <p>Find me in app/views/islands/index.html.erb</p>
+
+<%= params %>
+<% @islands.each do |island| %>
+<p> <%= island.name %> </p>
+<% end %>
