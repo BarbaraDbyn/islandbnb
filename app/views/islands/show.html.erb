@@ -1,4 +1,31 @@
-<h1>Islands#show</h1>
-<p>Find me in app/views/islands/show.html.erb</p>
+<div class="banner" style="background-image: url(<%= @island.photo %>)">
+</div>
 
-<%#= cl_image_tag @island.photo, height: 300, width: 400, crop: :fill %>
+<div class="card-owner-island">
+  <%= image_tag "https://kitt.lewagon.com/placeholder/users/arthur-littm", class: "avatar-show", alt: "avatar-large" %>
+  <%= @island.user.first_name %>
+</div>
+
+<div class="container">
+  <div class="d-flex flex-row">
+    <div class="d-flex flex-column">
+      <h1><%= @island.name %></h1>
+      <i class="fas fa-star"></i>
+      <p><%= @island.description %></h3>
+    </div>
+    <div>
+      <%#= simple_form_for @island do |f| %>
+        <%#= f.input :start_date, as: :date %>
+        <%#= f.input :final_date, as: :date %>
+        <%#= f.button :submit %>
+      <%# end %>
+    </div>
+  </div>
+</div>
+
+<%#= f.input :departure, as: :date, start_year: Date.today.year - 90,
+                              end_year: Date.today.year - 12, discard_day: true,
+                              order: [:month, :year] %>
+        <%#= f.input :arrival, as: :date, start_year: Date.today.year - 90,
+                    end_year: Date.today.year - 12, discard_day: true,
+                    order: [:month, :year] %>

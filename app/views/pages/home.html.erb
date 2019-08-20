@@ -45,8 +45,3 @@
   <%= render 'shared/cardproduct' %>
 </div>
 
-<%= simple_form_for @island, method: :get do |f| %>
-  <%= f.input :name %>
-  <%= f.input :continent, collection: ["Afrique","Amérique du Nord","Amérique du Sud","Asie","Europe","Océanie"] %>
-  <%= f.button :submit %>
-<% end %>
