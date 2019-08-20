@@ -3,3 +3,4 @@ class Island < ApplicationRecord
   validates :continent, inclusion: { in: ['Asie', 'Amerique du Nord', 'Amerique du Sud', 'Europe', 'Afrique', 'Oceanie']}
   mount_uploader :photo, PhotoUploader
 end
+
