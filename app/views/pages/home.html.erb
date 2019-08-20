@@ -10,6 +10,7 @@
     <h2 class="container">Réservez une île et une expérience unique</h2>
     <hr style="margin-left: 15px">
     <br>
+
     <form>
       <div class="form-row col-md-12">
         <div class="form-group col-md-4">
@@ -43,3 +44,9 @@
   <%= render 'shared/cardcontinent' %>
   <%= render 'shared/cardproduct' %>
 </div>
+
+<%= simple_form_for @island, method: :get do |f| %>
+  <%= f.input :name %>
+  <%= f.input :continent, collection: ["Afrique","Amérique du Nord","Amérique du Sud","Asie","Europe","Océanie"] %>
+  <%= f.button :submit %>
+<% end %>
