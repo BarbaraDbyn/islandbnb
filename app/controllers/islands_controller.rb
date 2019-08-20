@@ -15,6 +15,7 @@ class IslandsController < ApplicationController
   end
 
   def show
+    @island = Island.find(params[:id])
   end
 
   def create
