@@ -60,7 +60,7 @@ Island.create!(
 Island.create!(
     name: 'Sudo Teg',
     description: 'Sudo Teg, toponyme tongien signifiant littéralement en français « grande Maraboue », est une des îles des Fidji. Elle concentre sur une superficie de 10 km², située à 16 kilomètres à l\'ouest de Viti Levu.',
-    continent: 'Oceanie',
+    continent: 'Océanie',
     availability: true,
     price_per_day: 40000,
     user: yoann,
