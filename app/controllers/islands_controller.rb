@@ -16,12 +16,21 @@ class IslandsController < ApplicationController
 
   def show
     @island = Island.find(params[:id])
+    @booking = Booking.new
+    @markers = [
+      {
+        lat: @island.latitude,
+        lng: @island.longitude
+      }
+    ]
   end
 
   def create
     @island = Island.new(island_params)
+    @island.user = current_user
+    p @island.save!
     if @island.save
-      redirect_to islands_path(@islands.continent)
+      redirect_to islands_path(continent: "#{@island.continent}")
     else
       render :new
     end

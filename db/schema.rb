@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_20_111829) do
+ActiveRecord::Schema.define(version: 2019_08_21_081909) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,7 +29,6 @@ ActiveRecord::Schema.define(version: 2019_08_20_111829) do
   create_table "islands", force: :cascade do |t|
     t.string "name"
     t.text "description"
-    t.string "localisation"
     t.boolean "availability"
     t.integer "price_per_day"
     t.bigint "user_id"
@@ -37,6 +36,9 @@ ActiveRecord::Schema.define(version: 2019_08_20_111829) do
     t.datetime "updated_at", null: false
     t.string "continent"
     t.string "photo"
+    t.string "address"
+    t.float "latitude"
+    t.float "longitude"
     t.index ["user_id"], name: "index_islands_on_user_id"
   end
 

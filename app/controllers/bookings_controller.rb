@@ -14,7 +14,9 @@ skip_before_action :authenticate_user!, only: [:home, :index, :show]
   end
 
   def create
-    @booking = Booking.new(params[:booking])
+    @booking = Booking.new(params_booking)
+    @booking.island_id = params[:island_id]
+    @booking.user = current_user
     if @booking.save
       redirect_to booking_path(@booking)
     else
@@ -35,6 +37,10 @@ skip_before_action :authenticate_user!, only: [:home, :index, :show]
   end
 
   private
+
+  def params_booking
+    params.require(:booking).permit(:check_in_date, :check_out_date)
+  end
 
   def find_booking
     @booking = Booking.find(params[:id])
