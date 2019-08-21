@@ -4,7 +4,9 @@ class IslandsController < ApplicationController
 
   def index
     if params[:continent].present?
-      @islands = Island.where("continent ILIKE ?", "%#{params[:continent]}%")
+      keyword_search = CONTINENT_CARD[params[:continent].to_sym][:name]
+      @picture = CONTINENT_CARD[params[:continent].to_sym][:image_path]
+      @islands = Island.where("continent ILIKE ?", "%#{keyword_search}%")
     else
       @islands = Island.all
     end

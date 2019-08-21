@@ -1,0 +1,9 @@
+<div class="col-sm-4">
+  <%= link_to islands_path(continent: continent[0]) do %>
+    <div class="card-continent my-3">
+      <div class="card-body d-flex justify-content-center align-items-center" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= continent[1][:image_path] %>)">
+        <div class="continent-name"><%= continent[1][:name] %></div>
+      </div>
+    </div>
+  <% end %>
+</div>
