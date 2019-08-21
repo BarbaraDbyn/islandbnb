@@ -23,7 +23,7 @@ puts 'Creating islands...'
     description: 'Peite île située sur le littoral bordant l\'Océan pacifique, bordée par et les montagnes de la Sierra Madre del Sur qui encerclent la baie.
                   l\'Ilsa GitKommitzle possède un climat tropical doux et le plus stable du continent américain, avec une
                   température moyenne annuelle de 28 °C, elle n\'attends que vous!',
-    continent: 'Amerique du Sud',
+    continent: 'Amérique du Sud',
     availability: true,
     price_per_day: 12000,
     user: barbara,
@@ -36,7 +36,7 @@ puts 'Creating islands...'
     description: 'Rails Island, anciennement «Îles du Ruby», fait partie de l\'archipel canadien au large de la Colombie-Britannique.
                   Situées dans les eaux côtières de l\'Alaska du Sud-Est et de la Colombie-Britannique, elles comprennent deux îles
                   principales séparées par un très étroit chenal.',
-    continent: 'Amerique du Nord',
+    continent: 'Amérique du Nord',
     availability: true,
     price_per_day: 11000,
     user: jean,
