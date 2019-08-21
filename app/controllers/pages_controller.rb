@@ -3,6 +3,7 @@ class PagesController < ApplicationController
 
   def home
     @island = Island.new
+    @islands = Island.all
   end
 
   def index
