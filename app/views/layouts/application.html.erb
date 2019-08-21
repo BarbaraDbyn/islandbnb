@@ -16,9 +16,8 @@
   </head>
   <body style= "background-color: white">
     <%= render 'shared/navbar' %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= yield %>
+    <%= render 'shared/flashes' %>
+    <div class="min-width-container"><%= yield %></div>
     <%= render 'shared/footer' %>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>

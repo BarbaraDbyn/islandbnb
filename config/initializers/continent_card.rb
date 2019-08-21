@@ -8,11 +8,11 @@ CONTINENT_CARD = [
     image_path: "https://images.unsplash.com/photo-1436914228390-c080778dd589?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
   },
   {
-    name: "Amerique du Nord",
+    name: "Amérique du Nord",
     image_path: "https://images.unsplash.com/photo-1515861187231-5add3e9c40cf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80",
   },
   {
-    name: "Amerique du Sud",
+    name: "Amérique du Sud",
     image_path: "https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
   },
   {

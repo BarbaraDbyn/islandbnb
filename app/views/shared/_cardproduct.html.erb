@@ -1,5 +1,5 @@
-<div class="card-product">
-  <% @islands.each do |island| %>
+<% @islands.each do |island| %>
+  <div class="card-product my-3">
     <img src=<%= island.photo %> />
     <div class="card-product-infos">
       <h2><%= link_to island.name, island_path(island) %> </h2>
@@ -7,5 +7,6 @@
       <p> <%= island.price_per_day %> € / jour</p>
       <p> <%= island.user.first_name %></p>
     </div>
-  <% end %>
-</div>
+  </div>
+<% end %>
+
