@@ -14,7 +14,7 @@ barbara = User.create!(first_name: 'Barbara', last_name: 'De Breyne', city: 'Com
 yoann = User.create!(first_name: 'Yoann', last_name: 'Bettinelli', city: 'Luxembourg', email: 'interiste54@gmail.com', password: 'azerty')
 
 puts 'Finished creating Users'
-
+Booking.destroy_all
 Island.destroy_all
 puts 'Creating islands...'
 
@@ -91,6 +91,18 @@ Island.create!(
     user: jean,
     photo: open('https://images.unsplash.com/photo-1519491512949-b70aa1855e6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=796&q=80'),
     address: 'Sanday, Isle of Canna PH44 4RS, Royaume-Uni'
+  )
+
+  Island.create!(
+    name: 'La reinita del pacifico',
+    description: 'L\'île Socorro est une île volcanique mexicaine de l\'océan Pacifique, située dans les îles Revillagigedo à 51 km au sud-sud-ouest de l\'île San Benedicto.
+                  La ville de Cabo San Lucas, au Mexique, se trouve à 459 km au nord-nord-est',
+    continent: 'Amérique du Sud',
+    availability: true,
+    price_per_day: 15000,
+    user: barbara,
+    photo: open('https://images.unsplash.com/photo-1544550581-1bcabf842b77?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=358&q=80'),
+    address: 'Islas de San Benito, B.C., Mexique'
   )
 
 puts 'Finished!'
