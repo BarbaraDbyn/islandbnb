@@ -27,7 +27,7 @@ puts 'Creating islands...'
     availability: true,
     price_per_day: 12000,
     user: barbara,
-    photo: open('https://images.unsplash.com/photo-1505881502353-a1986add3762?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2762&q=80')
+    photo: open('https://images.unsplash.com/photo-1505881502353-a1986add3762?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2762&q=80'),
     address: '5 Miles Phillip Goldson Hwy, Belize City, Belize'
   )
 
@@ -40,7 +40,7 @@ puts 'Creating islands...'
     availability: true,
     price_per_day: 11000,
     user: jean,
-    photo: open('https://images.unsplash.com/photo-1484821582734-6c6c9f99a672?ixlib=rb-1.2.1&auto=format&fit=crop&w=2691&q=80')
+    photo: open('https://images.unsplash.com/photo-1484821582734-6c6c9f99a672?ixlib=rb-1.2.1&auto=format&fit=crop&w=2691&q=80'),
     address: '7498 Highway 16, Skidegate, BC V0T 1S1, Canada'
   )
 
