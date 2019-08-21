@@ -27,7 +27,8 @@ puts 'Creating islands...'
     availability: true,
     price_per_day: 12000,
     user: barbara,
-    photo: open('https://images.unsplash.com/photo-1505881502353-a1986add3762?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2762&q=80')
+    photo: open('https://images.unsplash.com/photo-1505881502353-a1986add3762?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2762&q=80'),
+    address: '5 Miles Phillip Goldson Hwy, Belize City, Belize'
   )
 
   Island.create!(
@@ -39,7 +40,8 @@ puts 'Creating islands...'
     availability: true,
     price_per_day: 11000,
     user: jean,
-    photo: open('https://images.unsplash.com/photo-1484821582734-6c6c9f99a672?ixlib=rb-1.2.1&auto=format&fit=crop&w=2691&q=80')
+    photo: open('https://images.unsplash.com/photo-1484821582734-6c6c9f99a672?ixlib=rb-1.2.1&auto=format&fit=crop&w=2691&q=80'),
+    address: '7498 Highway 16, Skidegate, BC V0T 1S1, Canada'
   )
 
 Island.create!(
@@ -51,7 +53,8 @@ Island.create!(
     availability: true,
     price_per_day: 13000,
     user: yoann,
-    photo: open('https://images.unsplash.com/photo-1468746587034-766ade47c1ac?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80')
+    photo: open('https://images.unsplash.com/photo-1468746587034-766ade47c1ac?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80'),
+    address: 'Unnamed Road, Krong Preah Sihanouk, Krong Preah Sihanouk, Cambodge'
   )
 
 Island.create!(
@@ -62,7 +65,8 @@ Island.create!(
     availability: true,
     price_per_day: 40000,
     user: yoann,
-    photo: open('https://images.unsplash.com/photo-1516091877740-fde016699f2c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80')
+    photo: open('https://images.unsplash.com/photo-1516091877740-fde016699f2c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80'),
+    address: ' Vaiaku, Tuvalu'
   )
 
 Island.create!(
@@ -73,7 +77,8 @@ Island.create!(
     availability: true,
     price_per_day: 40000,
     user: barbara,
-    photo: open('https://images.unsplash.com/photo-1530948990335-1eb93cbe6430?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80')
+    photo: open('https://images.unsplash.com/photo-1530948990335-1eb93cbe6430?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80'),
+    address: 'Adresse : Mount Fleuri Road, Victoria, Seychelles'
   )
 
 Island.create!(
@@ -85,7 +90,8 @@ Island.create!(
     availability: true,
     price_per_day: 11000,
     user: jean,
-    photo: open('https://images.unsplash.com/photo-1519491512949-b70aa1855e6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=796&q=80')
+    photo: open('https://images.unsplash.com/photo-1519491512949-b70aa1855e6f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=796&q=80'),
+    address: 'Sanday, Isle of Canna PH44 4RS, Royaume-Uni'
   )
 
 puts 'Finished!'
