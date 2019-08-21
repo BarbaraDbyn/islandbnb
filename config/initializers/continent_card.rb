@@ -9,7 +9,7 @@ CONTINENT_CARD = [
   },
   {
     name: "Amerique du Nord",
-    image_path: "https://images.unsplash.com/photo-1529333241880-9558d5e5e064?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+    image_path: "https://images.unsplash.com/photo-1515861187231-5add3e9c40cf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80",
   },
   {
     name: "Amerique du Sud",
@@ -17,7 +17,7 @@ CONTINENT_CARD = [
   },
   {
     name: "Europe",
-    image_path: "https://images.unsplash.com/photo-1529333241880-9558d5e5e064?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+    image_path: "https://images.unsplash.com/photo-1475737154378-501d2de7fd94?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
   },
   {
     name: "Océanie",
