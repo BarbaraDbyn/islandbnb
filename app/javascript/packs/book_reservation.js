@@ -29,7 +29,7 @@ const bookReservation = () => {
     console.log(totalDays)
     const totalPrice = (totalDays * 10)
     days.innerText = `${totalPrice}`;
-    totalPriceReservation.innerText = `${totalDays * parseInt(pricePerDayIsland).innerText, 10 } euros`;
+    // totalPriceReservation.innerText = `${totalDays * parseInt(pricePerDayIsland).innerText, 10 } euros`;
     console.log(totalPriceReservation)
   });
 }
