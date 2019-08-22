@@ -18,9 +18,9 @@
       <i class="fas fa-star"></i>
       <i class="fas fa-star"></i>
       <br>
-      <p><%= @island.price_per_day %>€ /jour</p>
+      <p style="font-style: italic", class="price"><%= @island.price_per_day %>€ /jour</p>
       <p>Située en <span class="span-blue"><%= @island.continent %></span></p>
-      <p><%= @island.description %></h3>
+      <p><%= @island.description[0,02] %></p>
     </div>
     <div class="col-md-6">
       <div class="map-style"
@@ -36,13 +36,15 @@
       ></div>
       <div>
         <%= simple_form_for [@island, @booking] do |f| %>
-          <%= f.input :check_in_date %>
-          <%= f.input :check_out_date %>
-          <%= f.button :submit, "Réserver", class: 'btn btn-primary', style: 'margin-bottom: 30px' %>
-    <% end %>
-    <br>
-  </div>
+          <%= f.input :check_in_date, class: 'departure' %>
+          <%= f.input :check_out_date, class: 'arrival' %>
+          <div id="total-price"></div>
+          <%= f.button :submit, "Réserver", class: 'btn btn-primary reserve-button', style: 'margin-bottom: 30px' %>
+        <% end %>
+        <br>
+      </div>
     </div>
   </div>
 </div>
-²
+<div data-set="<%= @price %>"></div>
+

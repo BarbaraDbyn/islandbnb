@@ -33,6 +33,7 @@ class IslandsController < ApplicationController
         image_url: helpers.asset_url('palmtree.png')
       }
     ]
+    @price = 10
   end
 
   def create
@@ -55,6 +56,7 @@ class IslandsController < ApplicationController
   end
 
   def destroy
+    @island = Island.find(params[:id])
     @island.destroy
   end
 

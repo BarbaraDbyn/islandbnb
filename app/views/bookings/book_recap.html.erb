@@ -1,0 +1,43 @@
+<div class="wrapper">
+  <div class="container">
+  <h2> <%= @total_price %> </h2>
+  <h1 class="page-title">A propos de votre voyage :</h1>
+    <div class=" d-flex justify-content-center row">
+      <div class="col-md-8 col-sm-6">
+        <div class="ticket-card">
+          <div class="cover">
+            <img src=<%= @island.photo %> />
+          </div>
+
+          <div class="body">
+            <div class="artist">
+              <h6 class="info"><i class="fa fa-map-marker"></i><%= @island.continent %></h6>
+              <h4 class="name">Ile <%= @island.name %></h4>
+            </div>
+            <div class="price">
+              <div class="from">Prix par jour: </div>
+              <div class="value price-island-per-day">
+                <%= @island.price_per_day %><b>$</b>
+              </div>
+            </div>
+
+            <div class="clearfix"></div>
+            <div class="info">
+              <p><%= @island.description %></p>
+              <p><i class="fa fa-calendar"></i>30 Août 2019</p>
+              <p><i class="fa fa-calendar"></i>30 Août 2019</p>
+              <p class="days">Nombre de jours :</p>
+              <p class="days-total">1</p>
+              <p>Total :</p>
+              <p class="total-price-island">0</p>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+
+        <div class="footer">
+          <%= link_to "Confirmer la réservation", bookings_path, class: 'btn toggle-tickets validation-reservation' %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

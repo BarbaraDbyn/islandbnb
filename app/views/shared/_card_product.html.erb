@@ -2,6 +2,7 @@
   <div class="card-product my-3">
     <img src=<%= island.photo %> />
     <div class="card-product-infos">
+
       <h2><%= link_to island.name, island_path(island) %> </h2>
       <p><%= island.description %> </p>
       <p> <%= island.price_per_day %> € / jour</p>
@@ -10,3 +11,6 @@
   </div>
 <% end %>
 
+
+
+<%#= button_to "delete", @island, :method => :delete %>
