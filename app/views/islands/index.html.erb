@@ -1,8 +1,11 @@
-<h1>Our Islands</h1>
 
-<% if @picture.present? %>
-  <%= image_tag @picture, alt: "alttext" %>
+
+<% if params[:continent].present? %>
+  <div class="banner" style= "background-image: url('<%= @picture %>')">
+    <h1 style="margin: 10px"> Îles en <%= @islands.first.continent %></h1>
+  </div>
 <% end %>
+
 
 <div class="container design-card">
   <div class="d-flex">
@@ -11,3 +14,4 @@
     </div>
   </div>
 </div>
+
