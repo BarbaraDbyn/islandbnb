@@ -10,8 +10,11 @@
     <h2 class="container">Réservez une île et une expérience unique</h2>
     <hr style="margin-left: 15px">
     <br>
-
-    <%= render 'shared/cardcontinent' %>
+    <div class="row">
+      <% CONTINENT_CARD.each do |continent| %>
+        <%= render 'shared/card_continent', continent: continent %>
+      <% end %>
+    </div>
   </div>
 
 

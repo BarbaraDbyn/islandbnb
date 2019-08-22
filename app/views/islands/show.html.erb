@@ -2,7 +2,9 @@
 </div>
   <%= link_to "retour", :back, class:'btn btn-ghost', style: 'margin: 30px'%>
 <div class="card-owner-island">
-  <%= image_tag "https://kitt.lewagon.com/placeholder/users/arthur-littm", class: "avatar-show", alt: "avatar-large" %>
+  <%= cl_image_tag @island.user.photo, class: "avatar-show", alt: "avatar-large" %>
+  <%#= image_tag('photo_avatar.jpg',
+  <%#= image_tag "https://kitt.lewagon.com/placeholder/users/arthur-littm", class: "avatar-show", alt: "avatar-large" %>
   <%= @island.user.first_name %>
 </div>
 <div>
@@ -15,8 +17,9 @@
       <i class="fas fa-star"></i>
       <i class="fas fa-star"></i>
       <i class="fas fa-star"></i>
-      <p ><%= @island.price_per_day %>€ /jour</p>
-      <p style="font-style: italic">Située en <span class="span-blue"><%= @island.continent %></span></p>
+      <br>
+      <p><%= @island.price_per_day %>€ /jour</p>
+      <p>Située en <span class="span-blue"><%= @island.continent %></span></p>
       <p><%= @island.description %></h3>
     </div>
     <div class="col-md-6">
@@ -37,6 +40,7 @@
           <%= f.input :check_out_date %>
           <%= f.button :submit, "Réserver", class: 'btn btn-primary', style: 'margin-bottom: 30px' %>
     <% end %>
+    <br>
   </div>
     </div>
   </div>
