@@ -1,9 +1,17 @@
-<h1>Our Islands</h1>
+
+
+<% if params[:continent].present? %>
+  <div class="banner" style= "background-image: url('<%= @picture %>')">
+    <h1 style="margin: 10px"> Îles en <%= @islands.first.continent %></h1>
+  </div>
+<% end %>
+
 
 <div class="container design-card">
   <div class="d-flex">
     <div class="col-md-9">
-      <%=  render 'shared/cardproduct' %>
+      <%=  render 'shared/card_product' %>
     </div>
   </div>
 </div>
+
