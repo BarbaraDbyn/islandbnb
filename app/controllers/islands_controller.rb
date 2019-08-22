@@ -3,6 +3,8 @@ class IslandsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:home, :index, :show]
 
   def index
+    p params
+    p params[:continent].present?
     if params[:continent].present?
       keyword_search = CONTINENT_CARD[params[:continent].to_sym][:name]
       @picture = CONTINENT_CARD[params[:continent].to_sym][:image_path]
@@ -23,7 +25,8 @@ class IslandsController < ApplicationController
     @markers = [
       {
         lat: @island.latitude,
-        lng: @island.longitude
+        lng: @island.longitude,
+        image_url: helpers.asset_url('palmtree.png')
       }
     ]
   end
