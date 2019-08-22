@@ -48,6 +48,7 @@ class IslandsController < ApplicationController
   end
 
   def destroy
+    @island = Island.find(params[:id])
     @island.destroy
   end
 
