@@ -14,6 +14,10 @@ class IslandsController < ApplicationController
     end
   end
 
+  def myisland
+    @islands = Island.where( user: current_user)
+  end
+
   def new
     @island = Island.new
   end
