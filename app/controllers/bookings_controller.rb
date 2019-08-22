@@ -26,14 +26,10 @@ skip_before_action :authenticate_user!, only: [:home, :index, :show]
   end
 
   def book_recap
-    puts "------------------"
-    p @booking     = Booking.find(params[:id])
-    puts "------------------"
-    p days         = (@booking.check_out_date - @booking.check_in_date).to_i
-    puts "------------------"
-    p @island      = @booking.island
-    puts "------------------"
-    p @total_price = @island.price_per_day * days
+    @booking     = Booking.find(params[:id])
+    days         = (@booking.check_out_date - @booking.check_in_date).to_i
+    @island      = @booking.island
+    @total_price = @island.price_per_day * days
     # redirect_to bookings_path
   end
 
