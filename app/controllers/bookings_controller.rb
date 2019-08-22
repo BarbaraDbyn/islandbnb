@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-before_action :find_booking, only: [:show, :edit, :update, :destroy, :find_booking]
+before_action :find_booking, only: [:show, :edit, :update, :destroy]
 skip_before_action :authenticate_user!, only: [:home, :index, :show]
 
   def index
@@ -19,10 +19,18 @@ skip_before_action :authenticate_user!, only: [:home, :index, :show]
     @booking.island_id = params[:island_id]
     @booking.user = current_user
     if @booking.save
-      redirect_to booking_path(@booking)
+      redirect_to book_recap_path(Booking.last)
     else
       render :new
     end
+  end
+
+  def book_recap
+    @booking     = Booking.find(params[:id])
+    days         = (@booking.check_out_date - @booking.check_in_date).to_i
+    @island      = @booking.island
+    @total_price = @island.price_per_day * days
+    # redirect_to bookings_path
   end
 
   def edit
@@ -35,9 +43,6 @@ skip_before_action :authenticate_user!, only: [:home, :index, :show]
 
   def destroy
     @booking.destroy
-  end
-
-  def book_recap
   end
 
   private

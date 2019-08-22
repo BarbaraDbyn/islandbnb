@@ -26,6 +26,7 @@ class IslandsController < ApplicationController
         lng: @island.longitude
       }
     ]
+    @price = 10
   end
 
   def create
