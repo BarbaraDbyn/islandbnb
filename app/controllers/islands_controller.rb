@@ -19,6 +19,7 @@ class IslandsController < ApplicationController
   def show
     @island = Island.find(params[:id])
     @booking = Booking.new
+    @user = @island.user
     @markers = [
       {
         lat: @island.latitude,
