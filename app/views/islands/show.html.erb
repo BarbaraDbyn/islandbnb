@@ -2,7 +2,9 @@
 </div>
 
 <div class="card-owner-island">
-  <%= image_tag "https://kitt.lewagon.com/placeholder/users/arthur-littm", class: "avatar-show", alt: "avatar-large" %>
+  <%= cl_image_tag @island.user.photo, class: "avatar-show", alt: "avatar-large" %>
+  <%#= image_tag('photo_avatar.jpg',
+  <%#= image_tag "https://kitt.lewagon.com/placeholder/users/arthur-littm", class: "avatar-show", alt: "avatar-large" %>
   <%= @island.user.first_name %>
 </div>
 
@@ -10,10 +12,7 @@
   <div class="d-flex flex-row">
     <div class="col-md-6">
       <h1><%= @island.name %></h1>
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star"></i>
+      <br>
       <p style="font-style: italic"><%= @island.price_per_day %>€ /jour</p>
       <p>Située en <span class="span-blue"><%= @island.continent %></span></p>
       <p><%= @island.description %></h3>
@@ -34,6 +33,7 @@
           <%= f.input :check_out_date %>
           <%= f.button :submit, "Réserver", class: 'btn btn-primary', style: 'margin-bottom: 30px' %>
     <% end %>
+    <br>
   </div>
     </div>
   </div>

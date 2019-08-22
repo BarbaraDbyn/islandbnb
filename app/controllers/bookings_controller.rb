@@ -1,9 +1,10 @@
 class BookingsController < ApplicationController
-before_action :find_booking, only: [:show, :edit, :update, :destroy]
+before_action :find_booking, only: [:show, :edit, :update, :destroy, :find_booking]
 skip_before_action :authenticate_user!, only: [:home, :index, :show]
 
   def index
     @bookings = current_user.bookings
+    @user = User.new
   end
 
   def new
@@ -34,6 +35,9 @@ skip_before_action :authenticate_user!, only: [:home, :index, :show]
 
   def destroy
     @booking.destroy
+  end
+
+  def book_recap
   end
 
   private

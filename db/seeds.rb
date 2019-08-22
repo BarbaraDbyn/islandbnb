@@ -6,12 +6,20 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 puts 'Cleaning database...'
+Booking.destroy_all
+Island.destroy_all
 User.destroy_all
 
 puts 'creating user'
 jean = User.create!(first_name: 'Jean', last_name: 'Berti', city: 'Lille', email: 'berti.jean@gmail.com', password: 'azerty')
+jean.remote_photo_url = "https://kitt.lewagon.com/placeholder/users/jean-berti"
+jean.save!
 barbara = User.create!(first_name: 'Barbara', last_name: 'De Breyne', city: 'Comines', email: 'barbara.debreyne@orange.fr', password: 'azerty')
+barbara.remote_photo_url = "https://kitt.lewagon.com/placeholder/users/barbaradbyn"
+barbara.save!
 yoann = User.create!(first_name: 'Yoann', last_name: 'Bettinelli', city: 'Luxembourg', email: 'interiste54@gmail.com', password: 'azerty')
+yoann.remote_photo_url = "https://kitt.lewagon.com/placeholder/users/YoDarcoDev"
+yoann.save!
 
 puts 'Finished creating Users'
 Booking.destroy_all

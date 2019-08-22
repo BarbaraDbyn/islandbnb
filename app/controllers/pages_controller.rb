@@ -4,6 +4,7 @@ class PagesController < ApplicationController
   def home
     @island = Island.new
     @islands = Island.all
+    @user = User.new
   end
 
   def index
