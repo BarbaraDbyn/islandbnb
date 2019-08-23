@@ -1,6 +1,10 @@
 <% @islands.inspect %>
-
-<% @islands.each do |island| %>
-  <%= render 'shared/card_product', island: island %>
-<% end %>
-
+<div class="container design-card">
+  <div class="d-flex justify-content-center">
+    <div class="col-md-9">
+      <% @islands.each do |island| %>
+        <%= render 'shared/card_product', island: island %>
+      <% end %>
+    </div>
+  </div>
+</div>
