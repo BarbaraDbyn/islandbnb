@@ -1,19 +1,23 @@
   <div class="card-product my-3">
-    <% if  current_user == island.user %>
-    <% end %>
-    <img src=<%= island.photo %> />
+    <!-- <img src=<%#= island.photo %> /> -->
+    <!-- 200 de width et 170 de largeur -->
+    <%= cl_image_tag island.photo, height: 170, width: 200 %>
     <div class="card-product-infos">
       <h2><%= link_to island.name, island_path(island) %> </h2>
       <p><%= island.description %> </p>
       <p> <%= island.price_per_day %> € / jour</p>
-      <p> <%= island.user.first_name %></p>
-
-      <% if  current_user == island.user %>
-      <%= button_to "update", edit_island_path(island), method: :get%>
-      <% end %>
-
-    </div>
-      <div class="button">
-        <%= link_to "Delete", island, method: :delete%>
+      <div class="d-flex justify-content-between">
+        <p> <%= island.user.first_name %></p>
+        <div class="d-flex">
+          <% if  current_user == island.user %>
+            <div class="button mx-3">
+              <%= link_to "Delete", island, method: :delete%>
+            </div>
+            <div class="button">
+              <%= link_to "Update", edit_island_path(island), method: :get%>
+            </div>
+          <% end %>
+        </div>
       </div>
+    </div>
   </div>
