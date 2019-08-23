@@ -23,12 +23,19 @@
             <div class="clearfix"></div>
             <div class="info">
               <p><%= @island.description %></p>
-              <p><i class="fa fa-calendar"></i>30 Août 2019</p>
-              <p><i class="fa fa-calendar"></i>30 Août 2019</p>
-              <p class="days">Nombre de jours :</p>
-              <p class="days-total">1</p>
-              <p>Total :</p>
-              <p class="total-price-island">0</p>
+              <div class="period-of-stay d-flex justify-content-between">
+                <p><i class="fa fa-calendar"></i> <%= @booking.check_in_date.strftime("%e %B %Y")%></p>
+                <i class="fas fa-arrow-right"></i>
+                <p><i class="fa fa-calendar"></i><%= @booking.check_out_date.strftime("%e %B %Y") %></p>
+              </div>
+              <div class="d-flex justify-content-between number-of-days">
+                <p class="days">Nombre de jours : </p>
+                <p class="days-total"> <%= @days %> </p>
+              </div>
+              <div class="d-flex justify-content-between total-price-of-reservation">
+                <p>Montant total de votre réservation : </p>
+                <p class="total-price-island"> <strong><%= @total_price %><span>$</span></strong>  </p>
+              </div>
             </div>
             <div class="clearfix"></div>
         </div>
