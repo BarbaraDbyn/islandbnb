@@ -1,12 +1,11 @@
-<h1 class="margin next-holidays ">Mes prochaines vacances :</h1>
+<h1 class="margin next-holidays">Mes prochaines vacances :</h1>
+<br>
 
-<% @user.bookings.each do |booking| %>
-  <div class="container design-card">
-    <div class="d-flex">
-      <div class="col-md-9">
-        <%= render 'shared/card_product' %>
-      </div>
+<div class="container design-card">
+  <div class="d-flex justify-content-center">
+    <div class="col-md-9">
+      <%= render 'shared/cardbooking', islands: @islands %>
     </div>
   </div>
-<% end %>
-
+</div>
+<% console %>

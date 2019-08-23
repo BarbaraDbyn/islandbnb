@@ -13,9 +13,9 @@
   <div class="d-flex flex-row">
     <div class="col-md-6">
       <h1><%= @island.name %></h1>
-      <p class="price"><%= @island.price_per_day %>€ /jour</p>    
+      <p style=“font-style: italic”><%= @island.price_per_day %> € / jour</p>
+      <div id="price-per-day" class="d-none"><%= @island.price_per_day %></div>
       <br>
-      <p style="font-style: italic"><span class="price"><%= @island.price_per_day %></span> $ / jour.</p>
       <p>Située en <span class="span-blue"><%= @island.continent %></span></p>
       <p><%= @island.description %></p>
     </div>

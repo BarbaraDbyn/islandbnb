@@ -2,13 +2,10 @@ const bookReservation = () => {
 
   // const arrivalInput = document.querySelector('.booking_check_in_date');
   const departureInput = document.querySelector('.booking_check_out_date');
-  const pricePerDayIsland = document.querySelector('.price');
+  const pricePerDayIsland = document.querySelector('#price-per-day');
   const totalPriceReservation = document.querySelector('.total-price-island');
   const price = document.querySelector('#total-price');
   const days = document.querySelector('#total-days');
-
-  const buttonValidationReservation = document.querySelector('.simple_form reserve-button');
-  console.log(buttonValidationReservation)
 
   departureInput.addEventListener('change', (event) => {
     console.log(event);
@@ -33,7 +30,7 @@ const bookReservation = () => {
     const totalDays = (arrivalDate - departureDate) / 86400000;
     console.log(totalDays)
     const totalPrice = (totalDays * pricePerDayIsland.innerText)
-    price.innerText = `${totalPrice} $`;
+    price.innerText = `${totalPrice} €`;
     days.innerText = `${totalDays}`
         // totalPriceReservation.innerText = `${totalDays * parseInt(pricePerDayIsland).innerText, 10 } euros`;
     console.log()
