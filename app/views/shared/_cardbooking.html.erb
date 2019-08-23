@@ -1,0 +1,12 @@
+<% islands.each do |island| %>
+  <div class="card-product my-3">
+      <%= cl_image_tag island[0][0].photo, alt: "alttext" %>
+    <div class="card-product-infos">
+      <h2><%= link_to island[0][0].name, "" %></h2>
+      <p><%= island[0][0].description %> </p>
+     <p><%= island[1].check_in_date %></p>
+      <p><%= island[1].check_out_date %></p>
+    </div>
+  </div>
+<% end %>
+

@@ -16,7 +16,7 @@
             <div class="price">
               <div class="from">Prix par jour: </div>
               <div class="value price-island-per-day">
-                <%= @island.price_per_day %><b>$</b>
+                <%= @island.price_per_day %><b>€</b>
               </div>
             </div>
 
@@ -34,14 +34,14 @@
               </div>
               <div class="d-flex justify-content-between total-price-of-reservation">
                 <p>Montant total de votre réservation : </p>
-                <p class="total-price-island"> <strong><%= @total_price %><span>$</span></strong>  </p>
+                <p class="total-price-island"> <strong><%= @total_price %><span>€</span></strong>  </p>
               </div>
             </div>
             <div class="clearfix"></div>
         </div>
 
         <div class="footer">
-          <%= link_to "Confirmer la réservation", bookings_path(booking: true), class: 'btn toggle-tickets validation-reservation' %>
+          <%= link_to "Accédez à vos réservations", bookings_path(booking: true), class: 'btn toggle-tickets validation-reservation' %>
         </div>
       </div>
     </div>

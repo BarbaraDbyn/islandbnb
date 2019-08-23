@@ -4,6 +4,11 @@ skip_before_action :authenticate_user!, only: [:home, :index, :show]
 
   def index
     @bookings = current_user.bookings
+    @islands = []
+    @user_bookings = @bookings.where(user_id: current_user.id)
+    @user_bookings.each do |booking|
+      @islands << [Island.where(id: booking.island_id), booking]
+    end
     @user = User.new
     flash[:notice] = "Votre réservation a bien été prise en compte" if params[:booking] == "true"
   end
