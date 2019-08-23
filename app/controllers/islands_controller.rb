@@ -18,10 +18,6 @@ class IslandsController < ApplicationController
     @islands = Island.where( user: current_user)
   end
 
-  def new
-    @island = Island.new
-  end
-
   def show
     @island = Island.find(params[:id])
     @booking = Booking.new
@@ -34,6 +30,10 @@ class IslandsController < ApplicationController
       }
     ]
     @price = 10
+  end
+
+  def new
+    @island = Island.new
   end
 
   def create
@@ -51,8 +51,11 @@ class IslandsController < ApplicationController
   end
 
   def update
-    @island.update(island_params)
-    redirect_to islands_path(@islands.continent)
+    if @island.update(island_params)
+      redirect_to island_path(@island)
+    else
+      render :edit
+    end
   end
 
   def destroy
@@ -67,6 +70,6 @@ class IslandsController < ApplicationController
   end
 
   def island_params
-    params.require(:island).permit(:name, :description, :continent, :availability, :price_per_day, :photo)
+    params.require(:island).permit(:name, :description, :address, :continent, :availability, :price_per_day, :photo)
   end
 end
