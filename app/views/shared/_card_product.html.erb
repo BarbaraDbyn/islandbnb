@@ -1,7 +1,5 @@
   <div class="card-product my-3">
-    <!-- <img src=<%#= island.photo %> /> -->
-    <!-- 200 de width et 170 de largeur -->
-    <%= cl_image_tag island.photo, height: 170, width: 200 %>
+    <%= cl_image_tag island.photo %>
     <div class="card-product-infos">
       <h2><%= link_to island.name, island_path(island) %> </h2>
       <p><%= island.description %> </p>
