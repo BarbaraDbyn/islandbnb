@@ -147,12 +147,48 @@ praslin = Island.new(
                   principales séparées par un très étroit chenal.',
     continent: 'Amérique du Nord',
     availability: true,
-    price_per_day: 11000,
-    user: jean,
+    price_per_day: 10000,
+    user: yoann,
     address: 'Isla Montserrat'
   )
     railsisland.remote_photo_url = 'https://images.unsplash.com/photo-1484821582734-6c6c9f99a672?ixlib=rb-1.2.1&auto=format&fit=crop&w=2691&q=80'
     railsisland.save!
+
+  poutine = Island.new(
+    name: 'l\'Île La poutine',
+    description: 'L\'île de la poutine fait partie de l\'archipel des Mille-Îles est un ensemble d\'îles situées dans le fleuve Saint-Laurent, là où ce dernier émerge du coin nord-est du lac Ontario.',
+    continent: 'Amérique du Nord',
+    availability: true,
+    price_per_day: 10000,
+    user: jean,
+    address: 'Ash Island, Canada'
+  )
+    poutine.remote_photo_url = 'https://66.media.tumblr.com/f4e5deaeab38fa26b3dacc609f685d6e/tumblr_pb6v62k01A1szm930o1_1280.jpg'
+    poutine.save!
+
+ boldt = Island.new(
+    name: 'Château de Boldt, Heart Island',
+    description: 'Le château de Boldt se trouve sur Heart Island dans l\'archipel des Mille-Îles sur le fleuve Saint-Laurent, le long de la frontière nord de l\'État de New York.',
+    continent: 'Amérique du Nord',
+    availability: true,
+    price_per_day: 10000,
+    user: barbara,
+    address: 'Heart Island, Canada'
+  )
+    boldt.remote_photo_url = 'http://www.boldtcastle.com/visitorinfo/wp-content/uploads/2018/08/purchaseonlinetickets.jpg'
+    boldt.save!
+
+ cabineinthelake = Island.new(
+    name: 'Cabine du Caribou',
+    description: 'Petite cabane au centre de l\'étang de la baie du Caribou située dans le parc national de la Mauricie.',
+    continent: 'Amérique du Nord',
+    availability: true,
+    price_per_day: 10000,
+    user: jean,
+    address: 'Baie en Bas du Caribou, Canada'
+  )
+    cabineinthelake.remote_photo_url = 'https://i.pinimg.com/564x/9b/2c/e8/9b2ce8c58d72343b9155354af5233dbd.jpg'
+    cabineinthelake.save!
 
 #************AMERIQUE SUD************
 
@@ -163,7 +199,7 @@ praslin = Island.new(
                   Située dans une reserve naturelle, un dépaysement garanti... gare aux prédateurs...',
     continent: 'Amérique du Sud',
     availability: true,
-    price_per_day: 15000,
+    price_per_day: 5000,
     user: barbara,
     address: 'Puerto Villamil, Équateur'
   )
@@ -172,17 +208,64 @@ praslin = Island.new(
 
   islagitkommitzle = Island.new(
     name: 'Ilsa GitKommitzle ',
-    description: 'Peite île située sur le littoral bordant l\'Océan pacifique, bordée par et les montagnes de la Sierra Madre del Sur qui encerclent la baie.
-                  l\'Ilsa GitKommitzle possède un climat tropical doux et le plus stable du continent américain, avec une
+    description: 'Peite île située sur le littoral bordant l\'Océan pacifique.L\'Ilsa GitKommitzle possède un climat tropical doux et le plus stable du continent américain, avec une
                   température moyenne annuelle de 28 °C, elle n\'attends que vous!',
     continent: 'Amérique du Sud',
     availability: true,
     price_per_day: 12000,
-    user: barbara,
-    address: 'Belize City, Belize'
+    user: yoann,
+    address: 'Northern Two Cayes, Belize'
   )
     islagitkommitzle.remote_photo_url = 'https://images.unsplash.com/photo-1505881502353-a1986add3762?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2762&q=80'
     islagitkommitzle.save!
+
+  lamorenita = Island.new(
+    name: 'La morenita ',
+    description: 'Peite cabane bordant Santa Marta en Colombie, cette cabane au coeur des Caraïbes vous donnera plus envie de repartir!',
+    continent: 'Amérique du Sud',
+    availability: true,
+    price_per_day: 12000,
+    user: jean,
+    address: 'Coral Caye, Belize'
+  )
+    lamorenita.remote_photo_url = 'https://197travelstamps.com/wp-content/uploads/2018/02/35-min.jpg'
+    lamorenita.save!
+
+  latimidita = Island.new(
+    name: 'La timidita ',
+    description: 'Cabane sur l\'île de bordant Santa Marta en Colombie, cette cabane au coeur des Caraïbes vous donnera plus envie de repartir!',
+    continent: 'Amérique du Sud',
+    availability: true,
+    price_per_day: 12000,
+    user: barbara,
+    address: 'Isla Gorgonilla, Colombia'
+  )
+    latimidita.remote_photo_url = 'https://www.mandaley.fr/wp-content//2018/04/ile-au-belize-bandeau.jpg'
+    latimidita.save!
+
+  latchiquita = Island.new(
+    name: 'La chiquita',
+    description: 'La chiquita est une Cabane sur l\'île de Coral Caye dans les Bélizes, venez vous évader...',
+    continent: 'Amérique du Sud',
+    availability: true,
+    price_per_day: 12000,
+    user: jean,
+    address: 'Coral Caye, Belize'
+  )
+    latchiquita.remote_photo_url = 'https://images.squarespace-cdn.com/content/v1/52c9f4ebe4b02c7007cdd86a/1547602299745-RF0J102PDQ6HCWRS197E/ke17ZwdGBToddI8pDm48kC4W4PSQhpVWDByTSitY1zx7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0lqfkVpRp1g_2L-WsTQRP4LMjfKA94DoXwU9mfbZ0wueidatsgNTogRoJ7w_N-gAYA/image-asset.jpeg?format=1000w'
+    latchiquita.save!
+
+ sanandres = Island.new(
+    name: 'San Peyote',
+    description: 'San Peyote est une île colombienne de la mer des Caraïbes, au large de la côte du Nicaragua, proche du parc régional de Mangrove Old Point, une réserve naturelle abritant des crabes, des iguanes et des oiseaux.',
+    continent: 'Amérique du Sud',
+    availability: true,
+    price_per_day: 9000,
+    user: barbara,
+    address: 'San Andrés, Colombie'
+  )
+    sanandres.remote_photo_url = 'https://s3-pro.roomonline.es/cobi/media/www.sirenishotels.com/0c/42/san_andres_colombia_04.jpg'
+    sanandres.save!
 
 #************EUROPE************
 
@@ -213,17 +296,17 @@ iledeyavascreapt = Island.new(
     iledeyavascreapt.remote_photo_url = 'https://images.unsplash.com/photo-1511311910288-e78b830d4187?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80'
     iledeyavascreapt.save!
 
- iledepianosa = Island.new(
-    name: 'Île de Pianosa',
-    description: 'Pianosa est une île italienne faisant partie de l\'archipel toscan. Elle est administrativement rattachée à la commune de Campo nell\'Elba.',
+scriptopopulos = Island.new(
+    name: 'Scripto Populos',
+    description: 'Scripto Populos, est une île grecque de la mer Égée appartenant à l\'archipel des Cyclades. On rencontre parfois la forme ancienne Milo, notamment pour la célèbre Vénus de Milo.',
     continent: 'Europe',
     availability: true,
-    price_per_day: 9000,
+    price_per_day: 6000,
     user: jean,
-    address: 'Tsouloufi, grèce'
+    address: 'Milos, Grèce'
   )
-    iledepianosa.remote_photo_url = 'https://images.unsplash.com/photo-1545696724-89e7e2f087e8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=667&q=80'
-    iledepianosa.save!
+    scriptopopulos.remote_photo_url = 'https://images.unsplash.com/photo-1534283638241-a0fa146e5015?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=80'
+    scriptopopulos.save!
 
 #************OCEANIE************
 
@@ -239,6 +322,19 @@ sudoteg = Island.new(
   )
     sudoteg.remote_photo_url = 'https://images.unsplash.com/photo-1516091877740-fde016699f2c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80'
     sudoteg.save!
+
+savaii = Island.new(
+    name: 'Savai\'i',
+    description: 'Savai\'i, aussi orthographié Savaii, anciennement Salafai, est la plus grande des deux îles principales des Samoa, dans le Sud de l\'océan Pacifique.',
+    continent: 'Océanie',
+    availability: true,
+    price_per_day: 40000,
+    user: yoann,
+    address: 'Vaiaku, Tuvalu'
+  )
+    savaii.remote_photo_url = 'http://www.traveller.com.au/content/dam/images/g/t/9/2/z/l/image.related.articleLeadwide.620x349.gt927h.png/1484098509567.jpg'
+    savaii.save!
+
 #************END************
 
 
