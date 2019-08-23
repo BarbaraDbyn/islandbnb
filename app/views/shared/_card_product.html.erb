@@ -8,5 +8,8 @@
       <p><%= island.description %> </p>
       <p> <%= island.price_per_day %> € / jour</p>
       <p> <%= island.user.first_name %></p>
+      <% if  current_user == island.user %>
+      <%= button_to "update", edit_island_path(island), method: :get%>
+      <% end %>
     </div>
   </div>
