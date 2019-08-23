@@ -1,6 +1,5 @@
   <div class="card-product my-3">
     <% if  current_user == island.user %>
-      <%= button_to "delete", island, method: :delete %>
     <% end %>
     <img src=<%= island.photo %> />
     <div class="card-product-infos">
@@ -8,8 +7,13 @@
       <p><%= island.description %> </p>
       <p> <%= island.price_per_day %> € / jour</p>
       <p> <%= island.user.first_name %></p>
+
       <% if  current_user == island.user %>
       <%= button_to "update", edit_island_path(island), method: :get%>
       <% end %>
+
     </div>
+      <div class="button">
+        <%= link_to "Delete", island, method: :delete%>
+      </div>
   </div>
