@@ -1,11 +1,11 @@
 <div class="banner" style="background-image: url(<%= @island.photo %>)">
 </div>
-  <%= link_to "retour", :back, class:'btn btn-ghost', style: 'margin: 30px'%>
+<%= link_to "retour", :back, class:'btn btn-ghost', style: 'margin: 30px'%>
 <div class="card-owner-island">
   <%= cl_image_tag @island.user.photo, class: "avatar-show", alt: "avatar-large" %>
   <%#= image_tag('photo_avatar.jpg',
   <%#= image_tag "https://kitt.lewagon.com/placeholder/users/arthur-littm", class: "avatar-show", alt: "avatar-large" %>
-  <%= @island.user.first_name %>
+  <p class="set-name" ><%= @island.user.first_name %></p>
 </div>
 <div>
 </div>
@@ -13,10 +13,7 @@
   <div class="d-flex flex-row">
     <div class="col-md-6">
       <h1><%= @island.name %></h1>
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star"></i>
-      <i class="fas fa-star"></i>
+      <p class="price"><%= @island.price_per_day %>€ /jour</p>    
       <br>
       <p style="font-style: italic"><span class="price"><%= @island.price_per_day %></span> $ / jour.</p>
       <p>Située en <span class="span-blue"><%= @island.continent %></span></p>

@@ -1,17 +1,15 @@
-<%= link_to "retour", root_path, class:'btn btn-ghost', style: 'margin: 20px'%>
-
-
 <% if params[:continent].present? %>
   <div class="banner" style= "background-image: url('<%= @picture %>')">
-    <h1 style="margin: 10px"> Îles en <%= @islands.first.continent %></h1>
+    <h1 class="set-continent"> Îles en <%= @islands.first.continent %></h1>
   </div>
 <% end %>
 
+<%= link_to "retour", root_path, class:'btn btn-ghost', style: 'margin: 20px'%>
+
 <div class="container design-card">
-  <div class="d-flex">
+  <div class="d-flex justify-content-center">
     <div class="col-md-9">
       <%=  render 'shared/card_product' %>
     </div>
   </div>
 </div>
-

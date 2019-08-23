@@ -1,10 +1,34 @@
 .card-owner-island{
-  display: flex;
-  justify-content: flex-end;
-  padding-top: 50px;
-  padding-right: 210px;
+  // display: flex;
+  // justify-content: flex-end;
+  vertical-align: top;
+  display: inline-block;
+  text-align: center;
+  position: absolute;
+  right: 11em;
+  bottom: 6em;
 }
 
 .span-blue{
-  font-color: $blue;
+  color: $blue;
+}
+
+.btn-primary{
+  margin-bottom: 50px;
+}
+
+.margin{
+  margin-top: 50px;
+}
+
+.create-island-form{
+  background: rgba(82,116,150, 0.8);
+  color: white;
+  padding: 5px;
+  width: 500px;
+  margin-bottom: 30px
+}
+
+.price{
+  font-style: italic;
 }

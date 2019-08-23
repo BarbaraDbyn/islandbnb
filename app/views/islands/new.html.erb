@@ -1,11 +1,11 @@
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-md-8">
-      <h1>Faites profiter de votre île</h1>
+      <h1 class="margin create-island-form">Faites profiter de votre île</h1>
 
       <%= simple_form_for @island do |f| %>
         <%= f.input :name %>
-        <%= f.input :description, as: :text, :input_html => {:maxlength => 250,}%>
+        <%= f.input :description, as: :text, :input_html => {:maxlength => 250 }%>
         <%= f.input :continent, collection: ["Afrique", "Asie", "Amérique du Sud", "Amérique du Nord", "Océanie", "Europe"] %>
         <%= f.input :availability, as: :boolean, checked_value: true, unchecked_value: false %>
         <%= f.input :price_per_day, as: :integer %>
@@ -17,8 +17,3 @@
     </div>
   </div>
 </div>
-
-
-
-
-

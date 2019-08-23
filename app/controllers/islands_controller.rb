@@ -41,7 +41,7 @@ class IslandsController < ApplicationController
     @island.user = current_user
     p @island.save!
     if @island.save
-      redirect_to islands_path(continent: "#{@island.continent}")
+      redirect_to islands_path(continent: "#{@island.continent.parameterize.underscore}")
     else
       render :new
     end
