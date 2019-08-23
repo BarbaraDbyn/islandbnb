@@ -1,3 +1,6 @@
 <% @islands.inspect %>
 
-<%= render 'shared/card_product' %>
+<% @islands.each do |island| %>
+  <%= render 'shared/card_product', island: island %>
+<% end %>
+

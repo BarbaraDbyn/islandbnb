@@ -1,5 +1,7 @@
-<% @islands.each do |island| %>
   <div class="card-product my-3">
+    <% if  current_user == island.user %>
+      <%= button_to "delete", island, method: :delete %>
+    <% end %>
     <img src=<%= island.photo %> />
     <div class="card-product-infos">
 
@@ -9,8 +11,3 @@
       <p> <%= island.user.first_name %></p>
     </div>
   </div>
-<% end %>
-
-
-
-<%#= button_to "delete", @island, :method => :delete %>

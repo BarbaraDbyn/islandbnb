@@ -9,7 +9,9 @@
 <div class="container design-card">
   <div class="d-flex justify-content-center">
     <div class="col-md-9">
-      <%=  render 'shared/card_product' %>
+      <% @islands.each do |island| %>
+        <%= render 'shared/card_product', island: island %>
+      <% end %>
     </div>
   </div>
 </div>
