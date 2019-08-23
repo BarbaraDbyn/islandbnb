@@ -27,9 +27,9 @@ skip_before_action :authenticate_user!, only: [:home, :index, :show]
 
   def book_recap
     @booking     = Booking.find(params[:id])
-    days         = (@booking.check_out_date - @booking.check_in_date).to_i
+    @days         = (@booking.check_out_date - @booking.check_in_date).to_i
     @island      = @booking.island
-    @total_price = @island.price_per_day * days
+    @total_price = @island.price_per_day * (@days)
     # redirect_to bookings_path
   end
 
