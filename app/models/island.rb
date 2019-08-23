@@ -1,4 +1,5 @@
 class Island < ApplicationRecord
+  has_many :bookings, dependent: :destroy
   belongs_to :user
   validates :continent, inclusion: { in: ['Asie', 'Amérique du Nord', 'Amérique du Sud', 'Europe', 'Afrique', 'Océanie']}
   mount_uploader :photo, PhotoUploader
