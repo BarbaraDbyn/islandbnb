@@ -1,6 +1,5 @@
 <div class="wrapper">
   <div class="container">
-  <h2> <%= @total_price %> </h2>
   <h1 class="page-title">A propos de votre voyage :</h1>
     <div class=" d-flex justify-content-center row">
       <div class="col-md-8 col-sm-6">
@@ -35,7 +34,7 @@
         </div>
 
         <div class="footer">
-          <%= link_to "Confirmer la réservation", bookings_path, class: 'btn toggle-tickets validation-reservation' %>
+          <%= link_to "Confirmer la réservation", bookings_path(booking: true), class: 'btn toggle-tickets validation-reservation' %>
         </div>
       </div>
     </div>

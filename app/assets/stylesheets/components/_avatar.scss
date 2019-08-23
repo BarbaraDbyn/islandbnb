@@ -1,9 +1,11 @@
 .avatar-show {
-  width: 100px;
+  width: 110px;
   border-radius: 50%;
-  position: absolute;
-  right: 11em;
-  bottom: 8em;
+  border: 2.5px solid $blue;
+}
+
+.set-name{
+  font-weight: bold;
 }
 
 .avatar {

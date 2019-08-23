@@ -5,6 +5,7 @@ skip_before_action :authenticate_user!, only: [:home, :index, :show]
   def index
     @bookings = current_user.bookings
     @user = User.new
+    flash[:notice] = "Votre réservation a bien été prise en compte" if params[:booking] == "true"
   end
 
   def new
